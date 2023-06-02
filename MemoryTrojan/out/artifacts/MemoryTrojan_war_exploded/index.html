@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>内存马</title>
+<<<<<<< HEAD
+    <link href="static/css/css.css" rel="stylesheet" type="text/css">
+    <script src="static/js/vue.js"></script>
+    <script src="static/js/axios.min.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <h2>Servlet 详情</h2>
+    <template>
+        <div>
+            <ul>
+                <li v-for="servlet in servletList" :key="servlet.name">
+                    <strong>Name:</strong> {{ servlet.servletName }}<br>
+                    <strong>Class Name:</strong> {{ servlet.servletClass }}<br>
+                    <strong>Mapping:</strong>{{ servlet.servletMapping }}<br>
+                    <!-- 根据需要显示其他相关信息 -->
+
+                </li>
+            </ul>
+        </div>
+    </template>
+    <h2>内存马</h2>
+<form>
+    <input id="poc" type="text" value="" height="100px" width="100px"><br>
+    <input type="submit" @click="submitPoc">
+    <div v-if="msg">{{msg}}</div>
+</form>
+
+=======
+    <script src="static/js/vue.js"></script>
+    <script src="static/js/axios.min.js"></script>
+    <link href="static/css/css.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="app">
+<h2>内存马</h2>
+<h3>tomcat内存马 - servlet</h3>
+<form action="/poc" method="post">
+    <input id="pocTest" type="text" name="poc" value="" height="100px" width="100px"><br>
+    <input type="submit" value="submit" @click="pocReq">
+    <span>{{Msg}}</span>
+</form>
+>>>>>>> e95591830a43e11b62a9e60b0b72dab6d1d99cec
+</div>
+<script src="static/js/app.js"></script>
+</body>
+</html>
